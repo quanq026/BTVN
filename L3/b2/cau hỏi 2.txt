@@ -1,0 +1,20 @@
+1. Các mối quan hệ giữa các thực thể
+
+students - class_sections: N-N
+lecturers - class_sections: 1-N
+subjects - class_sections: 1-N
+lecturers - subjects: N-N
+
+2. Kiểu liên kết
+
+students - class_sections - N-N
+lecturers - class_sections - 1-N
+subjects - class_sections - 1-N
+lecturers - subjects - N-N
+
+3. Ý nghĩa thực tế
+
+students - class_sections: Một sinh viên có thể đăng ký nhiều lớp học phần, một lớp học phần có nhiều sinh viên tham gia
+lecturers - class_sections: Một giảng viên có thể dạy nhiều lớp học phần, một lớp học phần chỉ do một giảng viên phụ trách
+subjects - class_sections: Một môn học có thể mở nhiều lớp học phần, một lớp học phần chỉ thuộc về một môn học
+lecturers - subjects: Một giảng viên có thể dạy nhiều môn, một môn có thể được dạy bởi nhiều giảng viên

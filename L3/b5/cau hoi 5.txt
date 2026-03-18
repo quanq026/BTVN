@@ -1,0 +1,34 @@
+1. Thực thể và thuộc tính
+courses:
+
+course_id - PK
+course_name
+description
+tuition_fee
+
+lecturers:
+
+lecturer_id - PK
+full_name
+major
+phone
+
+students:
+
+student_id - PK
+full_name
+email
+register_date
+
+classes:
+
+class_id - PK
+schedule
+course_id - FK (tham chiếu courses)
+lecturer_id - FK (tham chiếu lecturers)
+
+enrollments (bảng trung gian N-N):
+
+student_id - FK (tham chiếu students)
+class_id - FK (tham chiếu classes)
+(student_id, class_id) - PK

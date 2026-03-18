@@ -1,0 +1,46 @@
+1. Các bảng quan hệ
+
+patients (Bệnh nhân)
+doctors (Bác sĩ)
+departments (Khoa)
+medical_records (Hồ sơ khám bệnh)
+
+2 & 3. Thuộc tính + khóa
+patients:
+
+patient_id - PK
+full_name
+gender
+birthday
+address
+phone
+
+departments:
+
+department_id - PK
+department_name
+location
+
+doctors:
+
+doctor_id - PK
+full_name
+gender
+birthday
+phone
+department_id - FK (tham chiếu departments)
+
+medical_records:
+
+record_id - PK
+exam_date
+diagnosis
+treatment
+patient_id - FK (tham chiếu patients)
+doctor_id - FK (tham chiếu doctors)
+
+Kiểu liên kết
+
+departments - doctors: 1-N (một khoa có nhiều bác sĩ)
+patients - medical_records: 1-N (một bệnh nhân có nhiều hồ sơ khám)
+doctors - medical_records: 1-N (một bác sĩ lập nhiều hồ sơ khám)

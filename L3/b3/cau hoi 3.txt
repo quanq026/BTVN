@@ -1,0 +1,36 @@
+1. Thực thể, thuộc tính, mối quan hệ
+customers:
+
+customer_id - PK
+full_name
+email
+phone
+address
+
+products:
+
+product_id - PK
+product_name
+price
+category
+
+orders:
+
+order_id - PK
+order_date
+total_amount
+customer_id - FK (tham chiếu customers)
+
+order_details:
+
+order_id - FK (tham chiếu orders)
+product_id - FK (tham chiếu products)
+quantity
+unit_price
+(order_id, product_id) - PK
+
+2. Kiểu liên kết
+
+customers - orders: 1-N (một khách hàng có nhiều đơn hàng)
+orders - order_details: 1-N (một đơn hàng có nhiều dòng chi tiết)
+products - order_details: 1-N (một sản phẩm xuất hiện trong nhiều đơn hàng)

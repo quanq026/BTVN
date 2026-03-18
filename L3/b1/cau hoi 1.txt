@@ -1,0 +1,46 @@
+1. Các thực thể chính
+
+books (Sách)
+readers (Độc giả)
+borrow_records (Phiếu mượn)
+
+2. Thuộc tính từng thực thể
+books:
+
+isbn
+title
+author
+published_year
+genre
+
+readers:
+
+reader_id
+full_name
+birth_date
+address
+phone
+
+borrow_records:
+
+record_id
+borrow_date
+due_date
+status
+reader_id
+isbn
+
+3. Phân loại khóa
+books:
+
+isbn - PK
+
+readers:
+
+reader_id - PK
+
+borrow_records:
+
+record_id - PK
+reader_id - FK (tham chiếu readers)
+isbn - FK (tham chiếu books)
