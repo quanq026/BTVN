@@ -60,6 +60,5 @@ drop view v_monthly_sales;
 
 /*
 	DROP VIEW xóa view thông thường — chỉ xóa định nghĩa truy vấn, không ảnh hưởng đến dữ liệu gốc trong bảng.
-
 	DROP MATERIALIZED VIEW xóa view vật chất hóa — xóa cả bản sao dữ liệu đã được lưu trữ trên đĩa.
 */
